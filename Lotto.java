@@ -51,7 +51,7 @@ public class Lotto
     }
     public void sortierenprim() {
         for (int i = 0; i<zahlensammlung.length; i++) {
-            int x = 0;
+            int x = 0;//Zahl, die verschoben wird
             int y = 0;
             int z = 0;
             int idec = i-1;
@@ -62,12 +62,14 @@ public class Lotto
             }
             if (test == true) { //wenn ja
                 for(int y=0; y<i;y++) {//was ist kleiner, hochzählen
-                    if(zahlensammlung[i] < zahlensammlung[y]) {//
-                        z = y;
+                    if(zahlensammlung[i] < zahlensammlung[y]) {//ist i größer als y? (y = position der überprüften Zahlen)
+                        z = y;//z ist die Position der gefundenen Zahl(y)
                     }
                 }
-                border[0] = zahlensammlung[z];
-                border[1] = zahlensammlung[y];
+                border[0] = zahlensammlung[z+1];//linker rand des Verschiebens ist z+1
+                border[1] = zahlensammlung[i];//rechter rand ist i
+                if(border[2] != 0)
+                wv = border[1] - border[2]; //wie viele Stellen braucht
                 
             }
         }
