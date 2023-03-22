@@ -79,6 +79,10 @@ public class Lotto
                     verschiebearr[k] = zahlensammlung[hochzaehlen];
                     hochzaehlen++;
                 } 
+                zahlensammlung[i] = x;
+                for(l = border[0]; l <= border[1];l++ ){
+                    zahlensammlung[l] = verschiebearr[l];
+                }
                 
                 
             }
