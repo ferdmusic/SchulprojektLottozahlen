@@ -60,7 +60,7 @@ public class Lotto
             }
             if (test == true) {
                 for(int y=0; y<i;y++) {
-                    if() {
+                    if(zahlensammlung[i]) {
                         
                     }
                 }
