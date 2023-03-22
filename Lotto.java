@@ -60,10 +60,11 @@ public class Lotto
             }
             if (test == true) {
                 for(int y=0; y<i;y++) {
-                    if(zahlensammlung[i]) {
-                        
+                    if(zahlensammlung[i] < zahlensammlung[y]) {
+                        x = i;
                     }
                 }
+                
             }
         }
     }
