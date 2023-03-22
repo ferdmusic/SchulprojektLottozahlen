@@ -75,6 +75,7 @@ public class Lotto
                 int[] verschiebearr = new verschiebearr[wv];
                 
                 
+                
             }
         }
     }
