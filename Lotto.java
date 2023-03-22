@@ -53,17 +53,21 @@ public class Lotto
         for (int i = 0; i<zahlensammlung.length; i++) {
             int x = 0;
             int y = 0;
+            int z = 0;
             int idec = i-1;
+            int[] borders = {0,0};
             test = false;
-            if(zahlensammlung[i] < zahlensammlung[idec]) {
+            if(zahlensammlung[i] < zahlensammlung[idec]) { //ist i größer als links 1-
                 test = true;
             }
-            if (test == true) {
+            if (test == true) { //wenn ja
                 for(int y=0; y<i;y++) {
                     if(zahlensammlung[i] < zahlensammlung[y]) {
-                        x = i;
+                        z = y;
                     }
                 }
+                border[0] = zahlensammlung[z];
+                border[1] = zahlensammlung[y]
                 
             }
         }
@@ -78,3 +82,4 @@ public class Lotto
 
     
 }
+//https://github.com/Ferd-fb/SchulprojektLottozahlen.git
