@@ -61,8 +61,8 @@ public class Lotto
                 test = true;
             }
             if (test == true) { //wenn ja
-                for(int y=0; y<i;y++) {
-                    if(zahlensammlung[i] < zahlensammlung[y]) {
+                for(int y=0; y<i;y++) {//was ist kleiner, hochzählen
+                    if(zahlensammlung[i] < zahlensammlung[y]) {//
                         z = y;
                     }
                 }
