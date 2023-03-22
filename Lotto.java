@@ -56,6 +56,7 @@ public class Lotto
             int z = 0;
             int idec = i-1;
             int[] borders = {0,0};
+            String wv = 0;
             test = false;
             if(zahlensammlung[i] < zahlensammlung[idec]) { //ist i größer als links 1-
                 test = true;
@@ -68,8 +69,12 @@ public class Lotto
                 }
                 border[0] = zahlensammlung[z+1];//linker rand des Verschiebens ist z+1
                 border[1] = zahlensammlung[i];//rechter rand ist i
-                if(border[2] != 0)
-                wv = border[1] - border[2]; //wie viele Stellen braucht
+                if(border[2] != 0){
+                    wv = border[1] - border[2]; //wie viele Stellen braucht der zwischenarray, der nun deklariert wird
+                } else {
+                    wv = border[1]- 1
+                }
+                
                 
             }
         }
