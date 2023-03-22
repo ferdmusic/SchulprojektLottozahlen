@@ -69,11 +69,9 @@ public class Lotto
                 }
                 border[0] = zahlensammlung[z+1];//linker rand des Verschiebens ist z+1
                 border[1] = zahlensammlung[i];//rechter rand ist i
-                if(border[2] != 0){
-                    wv = border[1] - border[2]; //wie viele Stellen braucht der zwischenarray, der nun deklariert wird
-                } else {
-                    wv = border[1]- 1
-                }
+                
+                wv = border[1] - border[2]; //wie viele Stellen braucht der zwischenarray, der nun deklariert wird
+                int[] wieviel = new wieviel[wv];
                 
                 
             }
