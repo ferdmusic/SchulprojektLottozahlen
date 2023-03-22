@@ -67,7 +67,7 @@ public class Lotto
                     }
                 }
                 border[0] = zahlensammlung[z];
-                border[1] = zahlensammlung[y]
+                border[1] = zahlensammlung[y];
                 
             }
         }
