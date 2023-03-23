@@ -20,7 +20,6 @@ public class Lotto
         // Instanzvariable initialisieren
         zufallszahl();
         System.out.println(zahlensammlungstr);
-        sortierenprim();
     }
     
     public void zufallszahl() {
@@ -51,29 +50,49 @@ public class Lotto
     }
     public void sortierenprim() {
         for (int i = 0; i<zahlensammlung.length; i++) {
-            int x = 0;
-            int y = 0;
+            int x = 0;//Zahl, die verschoben wird
+            int z = 0;
             int idec = i-1;
-            test = false;
-            if(zahlensammlung[i] < zahlensammlung[idec]) {
+            int[] border = {0,0};
+            int wv = 0;
+            boolean test = false;
+            if(zahlensammlung[i] < zahlensammlung[idec]) { //ist i größer als links 1-
                 test = true;
             }
-            if (test == true) {
-                for(int y=0; y<i;y++) {
-                    if() {
-                        
+            if (test == true) { //wenn ja
+                for(int y=0; y<i;y++) {//was ist kleiner, hochzählen
+                    if(zahlensammlung[i] < zahlensammlung[y]) {//ist i größer als y? (y = position der überprüften Zahlen)
+                        z = y;//z ist die Position der gefundenen Zahl(y)
                     }
                 }
+                border[0] = zahlensammlung[z+1];//linker rand des Verschiebens ist z+1
+                border[1] = zahlensammlung[i];//rechter rand ist i
+                int hochzaehlen = border[0];
+                
+                wv = border[1] - border[2]; //wie viele Stellen braucht der zwischenarray, der nun deklariert wird
+                int[] verschiebearr = new int[wv];
+                for(int k = 0; k <= wv; k++) {
+
+                    verschiebearr[k] = zahlensammlung[hochzaehlen];
+                    hochzaehlen++;
+                } 
+                zahlensammlung[i] = x;
+                for(int l = border[0]; l <= border[1];l++ ){
+                    zahlensammlung[l] = verschiebearr[l];
+                }
+                
+                
             }
         }
     }
 
-    public void clear() {
-        zahlensammlungstr = {"0","0","0","0","0","0"};
-        zahlensammlung = {0,0,0,0,0,0};
-        zahlsortprim = {0,0,0,0,0,0};
-        zahlsort = zahlensammlung;
-    }
+    // public void clear() {
+        // zahlensammlungstr = {"0","0","0","0","0","0"};
+        // zahlensammlung = {0,0,0,0,0,0};
+        // zahlsortprim = {0,0,0,0,0,0};
+        // zahlsort = zahlensammlung;
+    // }
 
     
 }
+//https://github.com/Ferd-fb/SchulprojektLottozahlen.git
