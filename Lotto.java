@@ -51,40 +51,19 @@ public class Lotto
     }
     public void sortierenprim() {
         for (int i = 0; i<zahlensammlung.length; i++) {
-            int x = 0;//Zahl, die verschoben wird
+            int x = 0;
             int y = 0;
-            int z = 0;
             int idec = i-1;
-            int[] borders = {0,0};
-            String wv = 0;
             test = false;
-            if(zahlensammlung[i] < zahlensammlung[idec]) { //ist i größer als links 1-
+            if(zahlensammlung[i] < zahlensammlung[idec]) {
                 test = true;
             }
-            if (test == true) { //wenn ja
-                for(int y=0; y<i;y++) {//was ist kleiner, hochzählen
-                    if(zahlensammlung[i] < zahlensammlung[y]) {//ist i größer als y? (y = position der überprüften Zahlen)
-                        z = y;//z ist die Position der gefundenen Zahl(y)
+            if (test == true) {
+                for(int y=0; y<i;y++) {
+                    if() {
+                        
                     }
                 }
-                border[0] = zahlensammlung[z+1];//linker rand des Verschiebens ist z+1
-                border[1] = zahlensammlung[i];//rechter rand ist i
-                String zwischenspeicher = zahlensammlung[z];
-                int hochzaehlen = border[0];
-                
-                wv = border[1] - border[2]; //wie viele Stellen braucht der zwischenarray, der nun deklariert wird
-                int[] verschiebearr = new verschiebearr[wv];
-                for(int k = 0; k <= wv; k++) {
-
-                    verschiebearr[k] = zahlensammlung[hochzaehlen];
-                    hochzaehlen++;
-                } 
-                zahlensammlung[i] = x;
-                for(l = border[0]; l <= border[1];l++ ){
-                    zahlensammlung[l] = verschiebearr[l];
-                }
-                
-                
             }
         }
     }
@@ -98,4 +77,3 @@ public class Lotto
 
     
 }
-//https://github.com/Ferd-fb/SchulprojektLottozahlen.git
